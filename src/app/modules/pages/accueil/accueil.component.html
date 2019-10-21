@@ -1,0 +1,73 @@
+<div class="acceuil-container">
+  <div class="recemment-consulte-container">
+    <div class=" ml-2 row">
+      <div class="col-lg-12 main-titre ">
+        <mat-icon class="icon-acceuil">watch_later</mat-icon>
+        <label class="titre-acceuil">Récemment consulté</label>
+      </div>
+    </div>
+
+    <div class=" mr-0 row ">
+      <div *ngFor="let item of historique">
+        
+
+          <app-matrice-card
+          
+          *ngIf="item.type === 'matrice'"
+          [nomMatrice]="item.nom"
+          [dateDeModification]="item.dateModification"
+          ></app-matrice-card>
+          <app-modele-card
+         
+          *ngIf="item.type === 'modele'"
+          [nomModele]="item.nom"
+          [dateDeModification]="item.dateModification"
+          ></app-modele-card>
+     
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="modele-container">
+    <div class="row ml-2">
+      <div class="col-lg-12 main-titre ">
+        <span class="modele-icon"></span>
+        <label class="titre-acceuil">Modèles</label>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div *ngFor="let item of modelesListe">
+        <app-modele-card
+          [nomModele]="item.nom"
+          [dateDeModification]="item.dateModification"
+        ></app-modele-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="matrice-container">
+    <div class="row ml-2 ">
+      <div class="col-lg-12 main-titre ">
+        <span class="matrice-icon"></span>
+        <label class="titre-acceuil">Matrices</label>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of matricesListe">
+        <app-matrice-card
+          [nomMatrice]="item.nom"
+          [dateDeModification]="item.dateModification"
+        ></app-matrice-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

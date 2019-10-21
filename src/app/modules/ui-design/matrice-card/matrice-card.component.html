@@ -1,0 +1,24 @@
+<div class=" ml-5 card">
+  <div class="card-menu">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Renommer</button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>Dupliquée</button>
+
+      <mat-divider></mat-divider>
+      <button mat-menu-item>Supprimer</button>
+    </mat-menu>
+
+    <button class="icon-menu" mat-icon-button [matMenuTriggerFor]="appMenu">
+      <i class="material-icons">more_vert</i>
+    </button>
+  </div>
+  <img mat-card-image src="../../../../assets/images/capture-matrice.png"
+  />
+  <mat-card-actions>
+    <div class="descreption-matrice">
+      <label class="matrice-titre">{{ nomMatrice }}</label>
+      <p class="date-modification-matrice">{{ dateDeModification | date }}</p>
+    </div>
+  </mat-card-actions>
+</div>

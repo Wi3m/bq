@@ -1,6 +1,4 @@
 ::ng-deep .mat-dialog-container {
-    /* height: 441px ;
-    width:  533px ;  */
     padding: 0%;
     overflow: auto;
 } 
@@ -69,8 +67,6 @@ opacity: 1;
       border: 0.5px solid #BFCCDB;
       border-radius: 2px;
       opacity: 1;
-    /*  margin-left: 22px;
-      margin-left: 82px;*/
     margin-top: 22px;
     margin-bottom: 48px;
 }

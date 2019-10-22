@@ -5,9 +5,6 @@ import { ErreurCreationModeleComponent } from '../modales/erreur-creation-modele
 import { AjouterMatriceFormComponent } from '../modales/ajouter-matrice-form/ajouter-matrice-form.component';
 import { Router } from '@angular/router';
 
-const ErreurConfig = new MatDialogConfig ();
-  ErreurConfig.disableClose=true;
-  ErreurConfig.autoFocus=true;
 
 @Component({
   selector: 'app-navbar',

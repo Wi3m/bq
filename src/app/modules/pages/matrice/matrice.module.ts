@@ -13,7 +13,8 @@ import { UiDesignModule } from '../../ui-design/ui-design.module';
     RouterModule.forChild([
       {
         path: '**', component: NavbarComponent, children: [
-          { path: '', pathMatch:'full', component: MatriceComponent },
+
+          { path: ':id', pathMatch:'full', component: MatriceComponent },
         ]
       },
     ])

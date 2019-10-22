@@ -12,8 +12,7 @@ import { AccueilComponent } from './accueil.component';
     RouterModule.forChild([
       {
         path: '**', component: NavbarComponent, children: [
-          { path: '**', component: AccueilComponent },
-          
+          { path: '**', component: AccueilComponent }
         ]
       },
     ])

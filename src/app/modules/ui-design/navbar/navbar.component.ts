@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AccueilService } from '../../cors/services/accueil.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ErreurCreationModeleComponent } from '../modales/erreur-creation-modele/erreur-creation-modele.component';
 import { AjouterMatriceFormComponent } from '../modales/ajouter-matrice-form/ajouter-matrice-form.component';
 import { Router } from '@angular/router';
+
+const ErreurConfig = new MatDialogConfig ();
+  ErreurConfig.disableClose=true;
+  ErreurConfig.autoFocus=true;
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +15,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  searchText: any;
   historique: any[];
   matrices: any[];
   modeles: any[];
@@ -19,6 +24,8 @@ export class NavbarComponent implements OnInit {
               public dialog: MatDialog,
               private route : Router
     ) { }
+
+
 
   ngOnInit() {
     this.getMatrices();
@@ -40,16 +47,15 @@ export class NavbarComponent implements OnInit {
  }
 
  creerModele(): void {
-   if (this.modeles.length >= 2 ) {
-    const dialogMod = this.dialog.open(ErreurCreationModeleComponent, {
-      width: '522px',
-      panelClass: 'custom-modalbox'
-      });
+   if (this.modeles.length >= 2 ) { 
+    this.dialog.open(ErreurCreationModeleComponent,{
+      width:'522 px'});
     }
  }
 
  ajouterMatrice() {
-  const dialogMat = this.dialog.open(AjouterMatriceFormComponent);
+  this.dialog.open(AjouterMatriceFormComponent,{
+    width:'535px'});
  }
 
  visualiserModele(item){

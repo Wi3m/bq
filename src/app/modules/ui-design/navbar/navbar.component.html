@@ -16,7 +16,7 @@
             </li> 
             <!--***************************************menu Modele ******************************************-->
 
-            <li class="nav-item mr-5 dropdown " routerLink="/modeles" routerLinkActive="active"> 
+            <li class="nav-item mr-5 dropdown "  routerLinkActive="active"> 
                 <a class="nav-link link d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     routerLinkActive="active">
                     <span class="icon-view "> </span>
@@ -24,7 +24,7 @@
                 </a>
                 <div class="dropdown-menu p-0 menu">
                     <div *ngFor="let modele of modeles">
-                        <button class="dropdown-item item-menu " (click)="visualiserModele(modele)">
+                        <button class="dropdown-item item-menu " (click)="visualiserModele(modele)" routerLink="/modeles">
                             {{modele.nom}}
                         </button>
                         <div class="dropdown-divider divider-top"></div>
@@ -40,7 +40,7 @@
 
 
             <!--***************************************menu Matrice ******************************************-->
-             <li class="nav-item dropdown" routerLink="/matrices" routerLinkActive="active">
+             <li class="nav-item dropdown"  routerLinkActive="active" >
                 <a class="nav-link link d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class=" icon-module "> </span>
                    
@@ -62,7 +62,7 @@
                     </div>
                     <div *ngFor="let matrice of matrices | search:'nom':searchText ; let i = index">
                         <div *ngIf="i<5">
-                            <button class="dropdown-item dropdown-item-btn-matrice"
+                            <button class="dropdown-item dropdown-item-btn-matrice" routerLink="/matrices" 
                                 (click)="visualiserMatrice(matrice)">
                                 {{ matrice.nom }}
                             </button>

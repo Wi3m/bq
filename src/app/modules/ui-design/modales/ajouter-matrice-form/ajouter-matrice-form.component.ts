@@ -47,6 +47,7 @@ export class AjouterMatriceFormComponent implements OnInit  , OnDestroy {
   }
   onClose(): void {
     this.dialogRef.close();
+    this.dialogRef.removePanelClass('mat-dialo');
   }
 
 

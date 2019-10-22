@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ModalesModule } from './modules/ui-design/modales/modales.module';
 
 @NgModule({
   declarations: [

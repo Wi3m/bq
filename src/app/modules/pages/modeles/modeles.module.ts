@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       {
         path: '**', component: NavbarComponent, children: [
-           { path:'id',component:ModelesComponent}
+           { path:':id',component:ModelesComponent}
         ]
       },
     ])

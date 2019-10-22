@@ -1,9 +1,9 @@
-/* ::ng-deep .mat-dialog-container {
-    height: 441px ;
-    width:  533px ; 
+::ng-deep .mat-dialog-container {
+    /* height: 441px ;
+    width:  533px ;  */
     padding: 0%;
     overflow: auto;
-} */
+} 
 
 .mat-dialo {
     height: 441px ;

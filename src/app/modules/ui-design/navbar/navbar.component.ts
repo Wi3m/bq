@@ -49,13 +49,17 @@ export class NavbarComponent implements OnInit {
  creerModele(): void {
    if (this.modeles.length >= 2 ) { 
     this.dialog.open(ErreurCreationModeleComponent,{
-      width:'522 px'});
+      width:'40%',
+      height:'193px'  
+    });
     }
  }
 
  ajouterMatrice() {
   this.dialog.open(AjouterMatriceFormComponent,{
-    width:'535px'});
+    width:'42%',
+    height:'441px'
+  });
  }
 
  visualiserModele(item){

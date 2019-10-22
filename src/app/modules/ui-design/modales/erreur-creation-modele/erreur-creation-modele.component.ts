@@ -15,7 +15,7 @@ export class ErreurCreationModeleComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
-    this.dialogRef.removePanelClass('mat-dialog-container');
+    // this.dialogRef.removePanelClass('mat-dialog-container');
   }
 
 }

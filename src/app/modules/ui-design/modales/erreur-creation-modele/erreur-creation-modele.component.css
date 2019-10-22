@@ -25,15 +25,11 @@ letter-spacing: 0;
 color: rgba(60, 60, 60, 1);
 opacity: 1;
 margin-left: 10px;
-margin-top: 18px;
-
-
+margin-top: 9px;
 }
 
 ::ng-deep .mat-dialog-container{
-top: 304px ; 
-left: 379px ;
-height: 193px ;
+/* height: 193px ; */
 background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box ;
 box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.54) ;
 opacity: 1 ;
@@ -48,8 +44,7 @@ height: 37px;
 background: rgba(0, 59, 125, 1) 0% 0% no-repeat padding-box;
 border-radius: 4px;
 opacity: 1;
-margin-top: 10px;
-margin-right: 5px;
+margin-top: 40px;
 }
 
 
@@ -62,8 +57,8 @@ margin-right: 5px;
 }
 }
 .close-mdl{
-top: 333px;
-left: 855px;
+top: 23%;
+left: 66.5%;
 width: 14px;
 height: 14px;
 color:#D8D8D8;

@@ -8,46 +8,53 @@
     </div>
     <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
         <ul class="navbar-nav">
-            <li class="nav-item mr-5 " routerLink="/accueil" routerLinkActive="active">
-                <a class="nav-link link">
-                    <span class="icon-home">
-                        Accueil </span>
+            <li class="nav-item mr-5" routerLink="/accueil" routerLinkActive="active" >
+                <a class="nav-link link d-flex" >
+                    <span class="icon-home"></span>
+                        <p class="title-menu">Accueil</p>
+                    
                 </a>
             </li> 
             <!--***************************************menu Modele ******************************************-->
 
-            <li class="nav-item mr-5 dropdown "  routerLinkActive="active"> 
-                <a class="nav-link link d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    routerLinkActive="active">
-                    <span class="icon-view "> </span>
-                    <p class="title-menu">Modèles</p>
+
+            <li class="nav-item dropdown mr-5"  routerLinkActive="active" >
+                <a class="nav-link link d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class=" icon-module "> </span>                   
+                   <p class="title-menu">
+                        Modèles
+                   </p>
                 </a>
-                <div class="dropdown-menu p-0 menu">
-                    <div *ngFor="let modele of modeles">
-                        <button class="dropdown-item item-menu " (click)="visualiserModele(modele)" routerLink="/modeles">
-                            {{modele.nom}}
-                        </button>
-                        <div class="dropdown-divider divider-top"></div>
+                <div class="dropdown-menu p-0 menu menu-modele">
+                    
+                    <div *ngFor="let modele of modeles ; let i = index">                        
+                            <button class="dropdown-item dropdown-item-btn-matrice" routerLink="/modeles" 
+                                (click)="visualiserModele(modele)">
+                                {{modele.nom}}
+                            </button>
+                            <div class="dropdown-divider divider"></div>
+                        
                     </div>
-                    <button type="button" class="dropdown-item dropdown-item-btn btn btn-light d-flex" (click)="creerModele()">
-                        <i class="add-icon material-icons mr-4">
+
+                    <button type="button" class="dropdown-item dropdown-item-btn btn btn-light d-flex"
+                    (click)="creerModele()">
+                        <i class="add-icon material-icons mr-3">
                             add_circle
-                        </i>
-                        Créer un modèle
+                        </i> Créer un modèle
                     </button>
                 </div>
-            </li> 
+
+            </li>
+
+
+
 
 
             <!--***************************************menu Matrice ******************************************-->
-             <li class="nav-item dropdown"  routerLinkActive="active" >
+             <li class="nav-item dropdown mr-5"  routerLinkActive="active" >
                 <a class="nav-link link d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class=" icon-module "> </span>
-                   
-                    <p class="title-menu">
-
-                        Matrices
-                    </p>
+                    <span class=" icon-module "> </span>                   
+                    <p class="title-menu">Matrices</p>                       
                 </a>
                 <div class="dropdown-menu p-0 menu">
                     <div class="dropdown-item item-menu-search">
@@ -71,7 +78,7 @@
 
                     <button type="button" class="dropdown-item dropdown-item-btn btn btn-light d-flex"
                         (click)="ajouterMatrice()">
-                        <i class="add-icon material-icons mr-4">
+                        <i class="add-icon material-icons mr-3">
                             add_circle
                         </i> Créer une matrice
                     </button>
